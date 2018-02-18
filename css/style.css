@@ -1,0 +1,135 @@
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  /* change if the mask should have another color then white */
+  z-index: 9999;
+  /* makes sure it stays on top */ }
+  #preloader #status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    /* centers the loading animation horizontally one the screen */
+    top: 50%;
+    /* centers the loading animation vertically one the screen */
+    background-image: url(../img/loading/loading.gif);
+    /* path to your loading animation */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+    /* is width and height divided by two */ }
+
+/* -------------------------------------------------------------------------
+   begin Scroll Down Button
+ * ------------------------------------------------------------------------- */
+button.scroll_down {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  height: 50px;
+  width: 30px;
+  bottom: 60px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none; }
+
+button.scroll_down:before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: scroll_down_btn-animation 2s infinite;
+  animation: scroll_down_btn-animation 2s infinite;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+@keyframes scroll_down_btn-animation {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 0; }
+  40% {
+    opacity: 1; }
+  80% {
+    -webkit-transform: translate(0, 20px);
+            transform: translate(0, 20px);
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes scroll_down_btn-animation {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 0; }
+  40% {
+    opacity: 1; }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    transform: translate(0, 20px);
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+/*-------------fin Scroll Down Button----------*/
+
+
+body {
+  font-family: 'Slabo 27px', serif; }
+
+header.container-fluid.inicio {
+  background-image: url(../img/fondo/img-fondo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; }
+  header.container-fluid.inicio .container.conter .col-xs-12.col-sm-12.col-md-12.caja-contenido {
+    position: relative;
+    top: 250px; }
+    header.container-fluid.inicio .container.conter .col-xs-12.col-sm-12.col-md-12.caja-contenido .col-xs-12.col-sm-12.col-md-12.caja-logo h1.logo .img-logo {
+      width: 70%;
+      height: auto;
+      margin: 0 auto;
+      display: block; }
+    header.container-fluid.inicio .container.conter .col-xs-12.col-sm-12.col-md-12.caja-contenido .col-xs-12.col-sm-12.col-md-12.boton-inicio {
+      text-align: center;
+      margin-top: 2%; }
+      header.container-fluid.inicio .container.conter .col-xs-12.col-sm-12.col-md-12.caja-contenido .col-xs-12.col-sm-12.col-md-12.boton-inicio a.btn.btn-def {
+        width: 200px;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.62);
+        color: #fff;
+        font-size: 40px; }
+      header.container-fluid.inicio .container.conter .col-xs-12.col-sm-12.col-md-12.caja-contenido .col-xs-12.col-sm-12.col-md-12.boton-inicio a.btn.btn-def.portafolio {
+        margin: 0;
+        margin-right: 100px; }
+
+.container-fluid.info-servicio {
+  height: auto;
+  width: auto;
+  background-color: #006075; }
+  .container-fluid.info-servicio .container.server {
+    margin: 40px auto; }
+    .container-fluid.info-servicio .container.server h2 {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 50px;
+      color: #fff; }
+    .container-fluid.info-servicio .container.server figure.col-xs-4.col-sm-4.col-md-4.col-lg-4 {
+      text-align: center; }
+      .container-fluid.info-servicio .container.server figure.col-xs-4.col-sm-4.col-md-4.col-lg-4 figcaption h3 {
+        font-size: 25px;
+        color: #fff; }

@@ -1,0 +1,108 @@
+$negro:#000;
+$blanco:#fff;
+$rojo:red;
+$azul-verde:#006075;
+$text-center:center;
+
+
+/* Preloader */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $negro;
+  /* change if the mask should have another color then white */
+  z-index: 9999;
+  /* makes sure it stays on top */
+  #status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    /* centers the loading animation horizontally one the screen */
+    top: 50%;
+    /* centers the loading animation vertically one the screen */
+    background-image: url(../img/loading/loading.gif);
+    /* path to your loading animation */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+    /* is width and height divided by two */
+  }
+}
+
+//sitio header
+
+body{
+	font-family: 'Slabo 27px', serif;
+}
+
+header.container-fluid.inicio{	
+	background-image:url(../img/fondo/img-fondo.jpg);
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	.container.conter{
+		.col-xs-12.col-sm-12.col-md-12.caja-contenido{
+			position: relative;
+			top: 250px;
+			.col-xs-12.col-sm-12.col-md-12.caja-logo{
+				h1.logo{
+					.img-logo{
+						width: 70%;
+						height: auto;
+						margin: 0 auto;
+						display: block;
+					}
+				}
+			}
+			.col-xs-12.col-sm-12.col-md-12.boton-inicio{
+				text-align: center;
+				margin-top: 2%;
+				a.btn.btn-def{
+					width: 200px ;
+    				padding:0;
+    				background-color: rgba(0, 0, 0, 0.62);
+    				color: #fff;
+    				font-size: 40px;
+				}
+				a.btn.btn-def.portafolio{
+					margin: 0;
+					margin-right: 100px;
+				}
+			}
+		}
+	}
+}
+
+// info servicio
+
+.container-fluid.info-servicio{
+	height: auto;
+	width: auto;
+	background-color: $azul-verde;
+	.container.server{
+		margin: 40px auto;
+		h2 {
+    		text-align: $text-center;
+    		font-size: 40px;
+    		margin-bottom: 50px;
+    		color:$blanco;
+		}
+		figure.col-xs-4.col-sm-4.col-md-4.col-lg-4{
+			text-align: $text-center;
+			figcaption{
+					  h3{
+					  	font-size:25px;
+					  	color: $blanco;
+					  }
+			}
+		}
+	}
+	
+}
+
