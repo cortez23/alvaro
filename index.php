@@ -19,7 +19,7 @@
 </header>
 
 <div class="container-fluid info-servicio">
-	<div class="container server">
+	<section class="container server">
 		<div class="row">
 			<h2>Servicios</h2>
 			<figure class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
@@ -41,7 +41,7 @@
 				</figcaption>
 			</figure>
 		</div>		
-	</div>
+	</section>
 </div>
 <?php include('portafolio.php') ?>
 <?php include('footer.php') ?>
