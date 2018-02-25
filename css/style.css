@@ -99,18 +99,20 @@ header.container-fluid.inicio {
   header.container-fluid.inicio .container.conter .col-xs-12.col-sm-12.col-md-12.caja-contenido {
     position: relative;
     top: 250px; }
-    header.container-fluid.inicio .container.conter .col-xs-12.col-sm-12.col-md-12.caja-contenido .col-xs-12.col-sm-12.col-md-12.caja-logo h1.logo .img-logo {
-      width: 70%;
+    header.container-fluid.inicio .container.conter .col-xs-12.col-sm-12.col-md-12.caja-contenido .col-xs-12.col-sm-12.col-md-12.caja-logo h1.logo {
+      width: 50%;
       height: auto;
-      margin: 0 auto;
-      display: block; }
+      margin: 0 auto; }
+      header.container-fluid.inicio .container.conter .col-xs-12.col-sm-12.col-md-12.caja-contenido .col-xs-12.col-sm-12.col-md-12.caja-logo h1.logo .img-logo {
+        width: 100%;
+        height: auto; }
     header.container-fluid.inicio .container.conter .col-xs-12.col-sm-12.col-md-12.caja-contenido .col-xs-12.col-sm-12.col-md-12.boton-inicio {
       text-align: center;
       margin-top: 2%; }
       header.container-fluid.inicio .container.conter .col-xs-12.col-sm-12.col-md-12.caja-contenido .col-xs-12.col-sm-12.col-md-12.boton-inicio a.btn.btn-def {
         width: 200px;
         padding: 0;
-        background-color: rgba(0, 0, 0, 0.62);
+        border: solid 1px #fff;
         color: #fff;
         font-size: 40px; }
       header.container-fluid.inicio .container.conter .col-xs-12.col-sm-12.col-md-12.caja-contenido .col-xs-12.col-sm-12.col-md-12.boton-inicio a.btn.btn-def.portafolio {
@@ -120,7 +122,8 @@ header.container-fluid.inicio {
 .container-fluid.info-servicio {
   height: auto;
   width: auto;
-  background-color: #006075; }
+  background-color: #006075;
+  padding: 100px 0; }
   .container-fluid.info-servicio .container.server {
     margin: 40px auto; }
     .container-fluid.info-servicio .container.server h2 {
@@ -128,8 +131,19 @@ header.container-fluid.inicio {
       font-size: 40px;
       margin-bottom: 50px;
       color: #fff; }
-    .container-fluid.info-servicio .container.server figure.col-xs-4.col-sm-4.col-md-4.col-lg-4 {
+    .container-fluid.info-servicio .container.server figure.col-sm-4.col-md-4.col-lg-4 {
       text-align: center; }
-      .container-fluid.info-servicio .container.server figure.col-xs-4.col-sm-4.col-md-4.col-lg-4 figcaption h3 {
+      .container-fluid.info-servicio .container.server figure.col-sm-4.col-md-4.col-lg-4 img {
+        width: 75%;
+        height: auto; }
+      .container-fluid.info-servicio .container.server figure.col-sm-4.col-md-4.col-lg-4 figcaption h3 {
         font-size: 25px;
         color: #fff; }
+
+.container-fluid.separador {
+  height: 25%;
+  background-image: url(../img/fondo/img-fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; }

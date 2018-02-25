@@ -116,11 +116,12 @@ header.container-fluid.inicio{
 			top: 250px;
 			.col-xs-12.col-sm-12.col-md-12.caja-logo{
 				h1.logo{
+          width: 50%;
+          height: auto;
+          margin: 0 auto;
 					.img-logo{
-						width: 70%;
+						width: 100%;
 						height: auto;
-						margin: 0 auto;
-						display: block;
 					}
 				}
 			}
@@ -130,7 +131,7 @@ header.container-fluid.inicio{
 				a.btn.btn-def{
 					width: 200px ;
     				padding:0;
-    				background-color: rgba(0, 0, 0, 0.62);
+    				border: solid 1px #fff;
     				color: #fff;
     				font-size: 40px;
 				}
@@ -149,6 +150,7 @@ header.container-fluid.inicio{
 	height: auto;
 	width: auto;
 	background-color: $azul-verde;
+  padding: 100px 0;
 	.container.server{
 		margin: 40px auto;
 		h2 {
@@ -157,16 +159,27 @@ header.container-fluid.inicio{
     		margin-bottom: 50px;
     		color:$blanco;
 		}
-		figure.col-xs-4.col-sm-4.col-md-4.col-lg-4{
+		figure.col-sm-4.col-md-4.col-lg-4{
 			text-align: $text-center;
-			figcaption{
+      img{
+        width: 75%;
+        height: auto;
+      }
+      figcaption{
 					  h3{
 					  	font-size:25px;
 					  	color: $blanco;
 					  }
 			}
 		}
-	}
-	
+	}	
+}
+.container-fluid.separador {
+    height: 25%;
+    background-image: url(../img/fondo/img-fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 

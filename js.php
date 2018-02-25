@@ -1,3 +1,4 @@
+
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- <script src="//code.jquery.com/jquery.js"></script> -->
@@ -14,8 +15,8 @@
 	<script src="js/gallery/modernizr.custom.97074.js"></script>
 	<script type="text/javascript" src="js/gallery/jquery.hoverdir.js"></script>
 	<script type="text/javascript" src="js/gallery/hoverdir.js"></script>
-
-
+<!--animation scroll  -->
+	<script src="js/animation/css3-animate.js"></script>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="Hello World"></script>

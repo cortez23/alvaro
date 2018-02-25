@@ -17,33 +17,10 @@
 	</div>
 	<button type="button" class="scroll_down" id="scroll_down"></button>
 </header>
-
-<div class="container-fluid info-servicio">
-	<section class="container server">
-		<div class="row">
-			<h2>Servicios</h2>
-			<figure class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
-				<img src="img/img/ui_design.svg" alt="UI Design">
-				<figcaption>
-					<h3> Design Grafic</h3>
-				</figcaption>
-			</figure>
-			<figure class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
-				<img src="img/img/website_design.svg" alt="Website Design">
-				<figcaption>
-					<h3>Website Design / </h3>
-				</figcaption>
-			</figure>
-			<figure class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
-				<img src="img/img/ui_design.svg" alt="UI Design">
-				<figcaption>
-					<h3>UI Design</h3>
-				</figcaption>
-			</figure>
-		</div>		
-	</section>
+<?php include ('servicios.php') ?>
+<div class="container-fluid separador">
 </div>
-<?php include('portafolio.php') ?>
+<?php include('portafoliov1.php') ?>
 <?php include('footer.php') ?>
 
 

@@ -1,42 +1,3 @@
-<?php require_once('Connections/baba.php'); ?>
-<?php
-if (!function_exists("GetSQLValueString")) {
-function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
-{
-  if (PHP_VERSION < 6) {
-    $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
-  }
-
-  $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
-
-  switch ($theType) {
-    case "text":
-      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-      break;    
-    case "long":
-    case "int":
-      $theValue = ($theValue != "") ? intval($theValue) : "NULL";
-      break;
-    case "double":
-      $theValue = ($theValue != "") ? doubleval($theValue) : "NULL";
-      break;
-    case "date":
-      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-      break;
-    case "defined":
-      $theValue = ($theValue != "") ? $theDefinedValue : $theNotDefinedValue;
-      break;
-  }
-  return $theValue;
-}
-}
-
-mysql_select_db($database_baba, $baba);
-$query_portafolio = "SELECT * FROM baba";
-$portafolio = mysql_query($query_portafolio, $baba) or die(mysql_error());
-$row_portafolio = mysql_fetch_assoc($portafolio);
-$totalRows_portafolio = mysql_num_rows($portafolio);
-?>
 <div class="container-fluid portafolio">
 <div class="row">
 <section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 dos" id="dos" style="height:auto;">
@@ -60,8 +21,8 @@ $totalRows_portafolio = mysql_num_rows($portafolio);
 				<!--GALERIA-->
 			<section class="cd-gallery">
 				<ul id="da-thumbs" class="da-thumbs ">
-					<li class="mix color-3 check2 radio2 option1"><a href="la_magia_sur.php"><img src="img/pag/lazapateria.jpg" alt="La Zapatería"/><div><span><?php echo $row_portafolio['titulo']; ?></span></div></a></li>
-					<li class="mix color-1 check1 radio2 option3"><a href="la-bicicleta.php"><img src="img/pag/lb.jpg" alt="La Bicicleta"/><div><span><?php echo $row_portafolio['titulo']; ?></span></div></a></li>
+					<li class="mix color-3 check2 radio2 option1"><a href="la_magia_sur.php"><img src="img/pag/lazapateria.jpg" alt="La Zapatería"/><div><span>La Zapatería</span></div></a></li>
+					<li class="mix color-1 check1 radio2 option3"><a href="la-bicicleta.php"><img src="img/pag/lb.jpg" alt="La Bicicleta"/><div><span>La Bicicleta Bar & Restaurant</span></div></a></li>
 					<li class="mix color-3 check2 radio2 option1"><a href="la_magia_sur.php"><img src="img/pag/la_magia.jpg" alt="La Magia del Sur"/><div><span>Colun La MAgia del Sur</span></div></a></li>
 					<li class="mix color-3 check2 radio2 option1"><a href="http://www.plantachanqueahue.cl"><img src="img/pag/vital.jpg" alt="Vital Planta Chanqueahue"/><div><span>Vital Planta Chanqueahue</span></div></a></li>
 					<li class="mix color-3 check2 radio2 option2"><a href="dr_martens.php"><img src="img/pag/drm.jpg" alt=""/><div><span>Dr. Martens</span></div></a></li>
@@ -76,8 +37,8 @@ $totalRows_portafolio = mysql_num_rows($portafolio);
 					<li class="mix color-3 check2 radio2 option1"><a href="hecho-amano.php"><img src="img/pag/amano.jpg" alt="hecho amano"/><div><span>Hecho Amano</span></div></a></li>
 					<li class="mix color-2 check3 radio3 option2"><a href="dia_delos_muertos.php"><img src="img/pag/fzne_muerte.jpg" alt="fanzine Día de los Muertos"/><div><span>Día de los Muertos:
 cómo se celebra en América Latina</span></div></a></li>
-					<li class="mix color-3 check2 radio2 option1"><a class=" " data-toggle="modal" href="#detalle"><img src="img/pag/metra.jpg" alt="Metra Inmobiliaria"/><div><span>Metra Inmobiliaria</span></div></a></li>
-					<li class="mix color-2 check1 radio3 option1"><a class=" " data-toggle="modal" href="<?php echo $_POST['id']; ?>"><img src="img/pag/cdarwin.jpg" alt="violeta"/><div><span>"Darwin" Una vida de anécdotas</span></div></a></li>
+					<li class="mix color-3 check2 radio2 option1"><a href="https://www.metra.cl/index.php"><img src="img/pag/metra.jpg" alt="Metra Inmobiliaria"/><div><span>Metra Inmobiliaria</span></div></a></li>
+					<li class="mix color-2 check1 radio3 option1"><a class=" " data-toggle="modal" href="#detalle"><img src="img/pag/cdarwin.jpg" alt="violeta"/><div><span>"Darwin" Una vida de anécdotas</span></div></a></li>
 					<li class="gap"></li>
 					<li class="gap"></li>
 					<li class="gap"></li>
@@ -88,7 +49,7 @@ cómo se celebra en América Latina</span></div></a></li>
 	</section>
 </div>
 </div>
-<div class="modal fade" id="<?php echo $_get['id']; ?>">
+<div class="modal fade" id="detalle">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -96,18 +57,11 @@ cómo se celebra en América Latina</span></div></a></li>
 				<h4 class="modal-title">Modal title</h4>
 			</div>
 			<div class="modal-body">
-            	<h5>id<?php echo $row_portafolio['id']; ?></h5>
-                <h2><?php echo $row_portafolio['titulo']; ?></h2>
-                <p><?php echo $row_portafolio['descripcion']; ?></p>
 				
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
 			</div>
 		</div>
 	</div>
 </div>
-<?php
-mysql_free_result($portafolio);
-?>

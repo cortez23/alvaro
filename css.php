@@ -9,3 +9,6 @@
 <!-- Style -->
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/style.css">
+<!-- animation scroll -->
+<link rel="stylesheet" href="css/animation/animations.css">
+
